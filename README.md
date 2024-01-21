@@ -20,7 +20,7 @@
 
 ### Проведено сравнение разных моделей и Был произведен подбор гиперпараметров
 
-Были произведены сравнения моделей в параметрами
+Были произведены сравнения моделей с гимерпараметрами
  - Модель Doc2Vec: vector_size=300, window=3, min_count=1, workers=4, epochs=20
  - Модель Doc2Vec: vector_size=500, window=5, min_count=3, workers=4, epochs=20
  - Модель Doc2Vec: vvector_size=1000, window=5, min_count=3, workers=4, epochs=20
@@ -30,11 +30,14 @@
 Также была использована модель fasttext с гиперпараметрами 
  - model='skipgram', wordNgrams=3, dim=300, ws=3, minCount=1, epoch=20, thread=4, verbose=2
 
+Было выяснено, что модель fasttext работает хорошо, даже лучше Doc2Vec
+С блокнотом можно ознакомиться по пути `./ipnbs/nlp_case_2_v2.ipynb`
+
 ### Произведена оценка производительности модели
 
 Железо для тестов Google colab:
  - CPU Intel Core i6
- - GPU NVidia Tesls T4
+ - GPU NVidia Tesla T4
 
 Инференс метчинга всего датасета вакансий по резюме(9924 вакансии) с fasttext занимает ~41минуты --> ~0,61сек на запись. 
 
